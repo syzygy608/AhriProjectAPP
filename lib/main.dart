@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'transport.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,9 +54,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: const Text('校網最新消息'),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const TransportPage()),
+                  );
+                },
                 child: const Text('周邊交通資訊'),
               ),
+
             ],
           ),
         ),
