@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'transport.dart';
+import 'most_use_link.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,7 +43,12 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MostUseLinkPage()),
+                  );
+                },
                 child: const Text('常用連結'),
               ),
               ElevatedButton(
